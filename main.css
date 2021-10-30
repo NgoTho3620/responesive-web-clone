@@ -1,0 +1,253 @@
+* {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    display: flex;
+    margin-top: 8px;
+}
+.nav-logo{
+    margin: auto;
+}
+
+.btn-icon {
+    width: 28px;
+    height: 28px;
+    color: #333;
+    margin-left: 8px;
+}
+
+.cart-icon {
+    width: 28px;
+    height: 28px;
+    color: #333;
+    margin-right: 8px;
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
+
+
+.nav_pc{
+    display: none;
+}
+
+.nav_mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: #fff;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: transform linear 0.2s, opacity linear 0.2s;
+    opacity: 0;
+}
+
+.nav_mobile-close {
+    font-size: 2.5rem;
+    color: #666;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.nav_mobile-list{
+    margin-top: 24px;
+    list-style: none;
+}
+.nav_mobile-link{
+    text-decoration: none;
+    display: block;
+    color: #333;
+    padding: 8px 0;
+    font-size: 1.4rem;
+}
+
+.nav_btn {
+    display: none;
+}
+
+.nav_btn:checked ~ .nav-overlay {
+    display: block;
+}
+
+.nav_btn:checked ~ .nav_mobile {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.silde {
+    position: relative;
+    margin-top: 5px;
+    padding-top: 50%;
+    background: url('https://fashion06.web4s.vn/uploads/plugin/gallery/125/th-i-trang-he-2018-88f04057455481-59d6506ee3e69.jpg') top center / cover no-repeat;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.product-img {
+    text-align: center;
+}
+.product-content{
+    padding: 10px;
+    text-align: center;
+}
+
+.product-content a {
+ text-decoration: none;
+ color: #333;
+}
+
+.product-price{
+    font-size: 1.4rem;
+}
+.footer{
+    margin: 15px;
+}
+.footer__heading{
+    font-size: 1.4rem;
+}
+.footer-list{
+    list-style: none;
+    display: flex;
+
+}
+.footer-item{
+    padding: 10px;
+}
+.footer-item__link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*Tablet */
+@media (min-width: 740px) and (max-width:1023px) {
+
+    .nav_pc-item a {
+        font-size: 1.6rem !important;
+    }
+
+    .nav_pc-item {
+        padding:0 8px 0 8px !important;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .product-item {
+        min-width: 370px;
+    }
+
+    .product-content{
+        padding: 10px;
+    }
+
+}
+
+@media (min-width: 740px) {
+    .nav {
+        width: 100%;
+        display: block;
+    }
+
+    .nav-bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav_bar-btn {
+        display: none;
+    }
+    .nav_pc {
+        display: block;
+    }
+
+    .nav-logo {
+        float: left;
+        margin: 0 0 0 15px;
+    }
+    .nav_pc-list {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav_pc-item {
+        padding:0 20px 0 20px;
+    }
+    .nav_pc-item a{
+        text-decoration: none;
+        color: #333;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    .nav_pc-item a:hover {
+        color: #0dcfff;
+    }
+    .nav-cart {
+        padding-left: 20px;
+        margin-left: 10px;
+    }
+}
+
+/* Mobile & tablet */
+@media (max-width: 1023px) {
+
+}
+
+/*Pc */
+@media (min-width: 1024px) {
+    .product {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .product-item {
+        min-width: 450px;
+    }
+
+    .product-content{
+        padding: 10px;
+    }
+
+}
